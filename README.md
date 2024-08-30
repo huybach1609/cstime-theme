@@ -8,7 +8,7 @@
 
 - Download  [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) ( Chrome, Microsoft Edge, Safari, Opera Next, and Firefox.)
 
-- Click [here](https://github.com/huybach1609/cstime-theme/raw/main/script.user.js) to install script 
+- Click [here](https://raw.githubusercontent.com/huybach1609/cstime-theme/main/script.use.js) to install script 
 
 
 

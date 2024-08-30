@@ -23,6 +23,7 @@ Theme: [theme.css](https://github.com/huybach1609/cstime-theme/blob/main/theme.c
 ![dracular](img/Dracular.jpg)
 
 ### Catppuccin Theme (Mocha Flavor)
+![catppuccin](img/Catppuccin.jpg)
 
 
 ### Iceberg Theme

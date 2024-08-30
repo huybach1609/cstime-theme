@@ -7,6 +7,8 @@
 // @match        https://cstimer.net/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=cstimer.net
 // @grant        GM_addStyle
+// @updateURL    https://github.com/huybach1609/cstime-theme/blob/main/script.use.js
+// @downloadURL  https://github.com/huybach1609/cstime-theme/blob/main/script.use.js 
 // ==/UserScript==
 
 GM_addStyle(`

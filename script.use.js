@@ -7,25 +7,27 @@
 // @match        https://cstimer.net/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=cstimer.net
 // @grant        GM_addStyle
-// @updateURL    https://github.com/huybach1609/cstime-theme/blob/main/script.use.js
-// @downloadURL  https://github.com/huybach1609/cstime-theme/blob/main/script.use.js 
 // ==/UserScript==
 
-GM_addStyle(`
+(function () {
+  'use strict';
+  GM_addStyle(`
 :root {
-  --text-0: 188, 108, 37;
-  --text-1: 254, 250, 224;
-  --text-1-shadow: 254, 250, 224;
-  --text-2: 221, 161, 94;
-  --text-2-shadow: 221, 161, 94;
-  --bg-0: 40, 54, 24;
-  --bg-1: 96, 108, 56;
-  --bg-2: 85, 57, 34;
-  
+    /*Change theme form here*/
+    --text-0: 251, 73, 52;
+    --text-1: 235, 219, 178;
+    --text-1-shadow: 235, 219, 178;
+    --text-2: 184, 187, 38;
+    --text-2-shadow: 184, 187, 38;
 
-  
-  --font: Monaco
-  /*Arial*/
+    --bg-0: 40, 40, 40;
+    --bg-1: 60, 56, 54;
+    --bg-2: 50, 48, 47;
+    /*-----------------------*/
+    
+
+    /*custom font*/
+    --font: Arial   
 }
 
 *{
@@ -219,7 +221,7 @@ input[type="checkbox"] {
   margin: 10px;
   background-color: transparent;
   backdrop-filter: blur(5px);
-  
+
 }
 .c1{
 border-top-left-radius: 10px !important;
@@ -328,4 +330,33 @@ width: 100px !important;
 	width: 100% !important;
   height: 25px;
 }
-  `);
+
+
+`);
+  function rgbToHex(rgb) {
+    return `#${rgb.split(',').map((x) => {
+      const hex = parseInt(x.trim()).toString(16);
+      return hex.length === 1 ? '0' + hex : hex;
+    }).join('')}`;
+  }
+  const rootStyle = getComputedStyle(document.documentElement);
+  const color = rootStyle.getPropertyValue('--bg-0').trim();
+  const colorHex = rgbToHex(color);
+
+  // Create and add the <link> tag
+  var maskIconLink = document.createElement('link');
+  maskIconLink.rel = 'mask-icon';
+  maskIconLink.color = colorHex;
+  document.head.appendChild(maskIconLink);
+
+  // Create and add the <meta> tags
+  var msTileColorMeta = document.createElement('meta');
+  msTileColorMeta.name = 'msapplication-TileColor';
+  msTileColorMeta.content = colorHex;
+  document.head.appendChild(msTileColorMeta);
+
+  var themeColorMeta = document.createElement('meta');
+  themeColorMeta.name = 'theme-color';
+  themeColorMeta.content = colorHex;
+  document.head.appendChild(themeColorMeta);
+})();

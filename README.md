@@ -1,7 +1,7 @@
-## Setup csTime
+## Setup csTimer
 - `display/zoom`: 90%
-- `display/UI design is`: Material design w/o shadows`
-- `display/backgroudImage`: custom
+- `display/UI design is`: Material design w/o shadows
+- `display/backgroudImage`: manual
 
 ## Installation
 You can use extensions that support CSS injection, such as Stylish or Tampermonkey. Here, we'll use Tampermonkey to inject CSS.
@@ -18,7 +18,9 @@ You can use extensions that support CSS injection, such as Stylish or Tampermonk
 
 
 ## Theme
-Theme: [theme.css](https://github.com/huybach1609/cstime-theme/blob/main/theme.css)
+
+Change theme by pick color scheme from this [theme.css](theme.css). Then replace old theme in script from Tampermonkey ([scrip.use.js](script.use.js))
+
 
 ### Gruvbox
 [image theme](https://gruvbox-wallpapers.pages.dev/wallpapers/minimalistic/ALLqk82.png)

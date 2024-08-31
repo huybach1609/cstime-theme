@@ -1,4 +1,4 @@
-## Setup csTime
+## Setup csTimer
 - `display/zoom`: 90%
 - `display/UI design is`: Material design w/o shadows`
 - `display/backgroudImage`: custom

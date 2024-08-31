@@ -18,23 +18,32 @@ GM_addStyle(`
   --text-1-shadow: 254, 250, 224;
   --text-2: 221, 161, 94;
   --text-2-shadow: 221, 161, 94;
-
   --bg-0: 40, 54, 24;
   --bg-1: 96, 108, 56;
   --bg-2: 85, 57, 34;
+  
+
+  
+  --font: Monaco
+  /*Arial*/
 }
 
+*{
+  transition: all 0.3s ease;
+}
 /* General */
 body {
-  font-family: "Monaco";
+  font-family: var(--font);
   color: rgb(var(--text-1));
   background-color: rgb(var(--bg-0));
+
 }
 
 /* LED counter timer */
 #lcd {
   text-shadow: 0px 0px 7px rgb(var(--text-1-shadow));
-  font-family: "Monaco";
+  font-family: var(--font);
+  font-size: 10rem;
 }
 
 .difflabel {
@@ -47,16 +56,15 @@ body {
 
 #avgstr .click {
   border-radius: 5px !important;
-  padding: 10px 3px;
   color: rgba(var(--text-1), 1) !important;
-  text-shadow: 0px 0px 2px rgba(var(--text-1-shadow), 0.5);
-  width: 110px;
-  font-size: 16px;
+  text-shadow: 0px 0px 2px rgba(var(--text-1-shadow), 0.7);
+  font-size: 2rem;
 }
 
 #avgstr .click:hover {
   backdrop-filter: blur(5px);
-  background-color: rgba(var(--bg-0), 0.5) !important;
+    padding: 5px 10px;
+  background-color: rgba(var(--text-1), 0.5) !important;
 }
 
 #avgstr .click:active {
@@ -68,7 +76,7 @@ body {
 .dialog {
   border-radius: 10px !important;
   backdrop-filter: blur(5px);
-  background: rgba(var(--bg-0), 0.5);
+  background: rgba(var(--bg-0), 0.7);
 }
 
 .dialogoption {
@@ -138,7 +146,7 @@ input[type="checkbox"] {
 /* Side bar */
 .tab {
   border-radius: 10px !important;
-  font-family: "Monaco";
+  font-family: var(--font);
   font-weight: medium;
   margin-top: 10px;
   padding: 5px 10px;
@@ -165,6 +173,7 @@ input[type="checkbox"] {
   display: relative;
   top: 15% !important;
   right: 10% !important;
+  font-size: 0.9em !important;
 }
 
 /* Statistic view */
@@ -210,6 +219,7 @@ input[type="checkbox"] {
   margin: 10px;
   background-color: transparent;
   backdrop-filter: blur(5px);
+  
 }
 .c1{
 border-top-left-radius: 10px !important;
@@ -244,12 +254,12 @@ border-top-left-radius: 10px !important;
 /* Buttons */
 .mybutton,
 #logo {
-  background-color: rgba(var(--bg-0), 0.5);
+  background-color: rgba(var(--bg-0), 0.7);
   color: rgba(var(--text-1), 1);
 }
 
 .mybutton:not(.enable):hover {
-  background-color: rgba(var(--bg-0), 0.5) !important;
+  background-color: rgba(var(--bg-0), 0.7) !important;
   color: rgba(var(--text-1), 1) !important;
 }
 .mybutton:active {
@@ -275,7 +285,7 @@ border-top-left-radius: 10px !important;
 
 .f40b tr:nth-child(odd)>td {
   color: rgba(var(--text-1), 1) !important;
-  background-color: rgba(var(--bg-1), 0.5) !important;
+  background-color: rgba(var(--bg-1), 0.7) !important;
 }
 
 .f40b tr:nth-child(odd)>td:first-child {
@@ -302,5 +312,20 @@ border-top-left-radius: 10px !important;
   background-color: transparent;
   color: rgba(var(--text-1), 1);
 }
+.value > div > table  {
+  width: 90%;
+border-spacing: 5px;
 
-`);
+}
+.value > div > table tbody tr td:first-child{
+width: 100px !important;
+}
+.value > div > table tbody tr td:last-child{
+	width: 90% !important;
+
+}
+.value > div > table tbody tr td:last-child input{
+	width: 100% !important;
+  height: 25px;
+}
+  `);

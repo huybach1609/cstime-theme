@@ -43,7 +43,27 @@ Change theme by pick color scheme from this [theme.css](theme.css). Then replace
 [image link](https://preview.redd.it/2560x1440-forest-stairs-everforest-theme-v0-7sgj3074v5gc1.jpeg?auto=webp&s=6ee8953f3a913b7e63da1218a009797c316ae688)
 ![theme](img/everforest.jpg)
 
+### create your own theme
+1. Pick color from scratch
+- Pick color palette from [coolors](https://coolors.co/)
+- choose them in RBG format 
 
+```
+    --text-0: 251, 73, 52; /*text highlight*/
+    --text-1: 235, 219, 178; /*primary text*/
+    --text-1-shadow: 235, 219, 178;  /*primary text shadow*/
+    --text-2: 184, 187, 38; /*secondary text*/ 
+    --text-2-shadow: 184, 187, 38; /*secondary text shadow*/
+
+    --bg-0: 40, 40, 40; /background color - 0/
+    --bg-1: 60, 56, 54; /background color - 1/
+    --bg-2: 50, 48, 47; /background color - 2/
+```
+![img](img/Coolor.png)
+
+2. Using AI
+- Choose a theme from [vim themes](https://vimcolorschemes.com/)
+- Pick a name then as AI to generate.
 
 
 

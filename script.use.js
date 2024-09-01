@@ -12,6 +12,7 @@
 (function () {
   'use strict';
   GM_addStyle(`
+    
 :root {
     /*Change theme form here*/
     --text-0: 251, 73, 52;
@@ -24,10 +25,10 @@
     --bg-1: 60, 56, 54;
     --bg-2: 50, 48, 47;
     /*-----------------------*/
-    
+
 
     /*custom font*/
-    --font: Arial   
+    --font: Arial
 }
 
 *{
@@ -270,37 +271,37 @@ border-top-left-radius: 10px !important;
 }
 
 /* List time */
-.f40b {
+.myscroll > table {
   width: 100%;
 }
 
-.f40b tr td,
-.f40b tbody tr th,
-.f40b {
+.myscroll > table tr td,
+.myscroll > table tbody tr th,
+.myscroll > table {
   border: none !important;
 }
 
-.f40b tr td:hover {
+.myscroll > table tr td:hover {
   color: rgba(var(--text-1), 1) !important;
   background-color: rgba(var(--bg-1), 1) !important;
 }
 
-.f40b tr:nth-child(odd)>td {
+.myscroll > table tr:nth-child(odd)>td {
   color: rgba(var(--text-1), 1) !important;
   background-color: rgba(var(--bg-1), 0.7) !important;
 }
 
-.f40b tr:nth-child(odd)>td:first-child {
+.myscroll > table tr:nth-child(odd)>td:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.f40b tr:nth-child(odd)>td:last-child {
+.myscroll > table tr:nth-child(odd)>td:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.f40b tr:nth-child(odd)>td:hover {
+.myscroll > table tr:nth-child(odd)>td:hover {
   background-color: rgba(var(--text-1), 1) !important;
   color: rgba(var(--bg-1), 1) !important;
 }
@@ -332,7 +333,8 @@ width: 100px !important;
 }
 
 
-`);
+
+    `);
   function rgbToHex(rgb) {
     return `#${rgb.split(',').map((x) => {
       const hex = parseInt(x.trim()).toString(16);
